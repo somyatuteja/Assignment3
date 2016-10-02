@@ -4,6 +4,15 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
+    <string name="profile">View Profile</string>
+    <string name="image">View Profile Picture</string>
     <string name="title_activity_main_page">MainPage</string>
     <string name="welcome">Welcome </string>
+    <string name="back">Back </string>
+    <string name="merge">Merge Music</string>
+    <string name="mergei">Merge in Internal Storage</string>
+    <string name="mergee">Merge in External Storage</string>
+    <string name="selectfile1">Select 1st File</string>
+    <string name="selectfile2">Select 2nd File</string>
+    <string name="namefile">Name the new file</string>
 </resources>

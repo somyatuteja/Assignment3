@@ -31,18 +31,34 @@ public class LoggedInActivity extends AppCompatActivity {
                 public void onClick(View v) {
 
                     SharedPreferences sharedPreferences = getSharedPreferences("LoggedInUser", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.clear();
                     editor.commit();
-                    Context context=getApplicationContext();
-                    Toast toast=Toast.makeText(context,"Logging you out",Toast.LENGTH_LONG);
+                    Context context = getApplicationContext();
+                    Toast toast = Toast.makeText(context, "Logging you out", Toast.LENGTH_LONG);
                     toast.show();
-                    Intent intent = new Intent(getBaseContext(),MainActivity.class);
+                    Intent intent = new Intent(getBaseContext(), MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     finish();
                 }
             });
+        }catch (Exception e){}
+            Button mMergeButton = (Button)findViewById(R.id.mergemusic);
+            try {
+                mMergeButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Context context=getApplicationContext();
+                        Toast toast=Toast.makeText(context,"Going to Merge",Toast.LENGTH_SHORT);
+                        toast.show();
+                        Intent intent = new Intent(getBaseContext(),MergeMusic.class);
+
+                        startActivity(intent);
+
+                    }
+                });
         } catch (Exception e){}
 
 
