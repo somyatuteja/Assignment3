@@ -1,5 +1,6 @@
 package com.example.hp.musicsharer;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -28,6 +29,8 @@ public class MergeMusic extends AppCompatActivity {
     static FileInputStream fisf2;
     private static final int GET_F1 = 0;
     private static final int GET_F2 = 2;
+    public static final String TAG="username";
+    public static final String DEFAULT="Username";
     private void getFileFromStorage(int l) {
 
         Intent i = new Intent(Intent.ACTION_GET_CONTENT);
@@ -180,6 +183,11 @@ public class MergeMusic extends AppCompatActivity {
                             fos.close();
                                 Log.v("Merge","Done");
                                 Context context = getApplicationContext();
+
+                                SharedPreferences sharedPreferences = getSharedPreferences("LoggedInUser", Context.MODE_PRIVATE);
+                                String user= sharedPreferences.getString(TAG,DEFAULT);
+                                DatabaseHelper db= DatabaseHelper.getInstance(context);
+                                db.insertData(user,mNewNameTextView.getText().toString());
                                 Toast toast = Toast.makeText(context, "Done", Toast.LENGTH_LONG);
                                 toast.show();
                                 }
