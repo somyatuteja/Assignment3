@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class LoggedInActivity extends AppCompatActivity {
     public static final String TAG="username";
-    public static final String DEFAULT="Username";
+    public static final String DEFAULT="Guest";
     public static  DatabaseHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +88,17 @@ public class LoggedInActivity extends AppCompatActivity {
 
                     }
                 });
+        } catch (Exception e){}
+        final Button mDeleteButton = (Button)findViewById(R.id.deletebutton);
+        final EditText mDeleteEditText =(EditText)findViewById(R.id.deleteet);
+        try {
+            mDeleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    db.deleteData(mDeleteEditText.getText().toString());
+                }
+            });
         } catch (Exception e){}
 
 

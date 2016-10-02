@@ -51,4 +51,15 @@ db.execSQL("create table "+TABLE_NAME+"("+COL1+" INTEGER PRIMARY KEY AUTOINCREME
         Cursor res=db.rawQuery("Select * from "+TABLE_NAME,null);
         return res;
     }
+    public void deleteData(String uname)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        db.delete(TABLE_NAME," user = ?",new String[] {uname});
+    }
+    public void updateData()
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor res=db.rawQuery("Select * from "+TABLE_NAME,null);
+
+    }
 }

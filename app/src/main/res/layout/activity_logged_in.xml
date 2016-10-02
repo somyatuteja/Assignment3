@@ -43,6 +43,8 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"/>
 </LinearLayout>
+
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,18 +57,49 @@
             android:background="#ffffff"
             android:id="@+id/mergemusic"
             />
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:paddingBottom="2dp"
-            android:paddingTop="2dp"
-            android:paddingRight="1dp"
-            android:paddingLeft="1dp"
-            android:text="@string/profile"
-            android:background="#ffffff"
-            android:id="@+id/viewprofile"
-            />
+            android:orientation="horizontal"
+
+            android:gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:text="@string/profile"
+                android:background="#ffffff"
+                android:id="@+id/viewprofile"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:text="Delete Profile"
+                android:background="#ffffff"
+                android:id="@+id/deletebutton"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:textSize="20dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/deleteet"
+                android:text="enter username to delete"
+                android:textColor="@color/abc_input_method_navigation_guard"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 

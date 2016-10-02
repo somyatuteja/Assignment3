@@ -240,5 +240,26 @@ catch (Exception e){}
 
         });
     } catch (Exception e){}
+
+        Button mBackButton =(Button)findViewById(R.id.back);
+        try {
+            mBackButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        try {
+                            Intent intent = new Intent(getBaseContext(),LoggedInActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                        }
+                        catch (Exception e){}
+                    }
+
+            });
+        } catch (Exception e){}
+
+
+
+
+
         }
 }
